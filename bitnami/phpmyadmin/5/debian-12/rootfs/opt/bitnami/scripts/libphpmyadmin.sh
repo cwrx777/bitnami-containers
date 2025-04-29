@@ -90,10 +90,10 @@ phpmyadmin_initialize() {
     ! is_empty_value "$PHPMYADMIN_ABSOLUTE_URI" && info "Setting PmaAbsoluteUri option" && phpmyadmin_conf_set "\$cfg['PmaAbsoluteUri']" "$PHPMYADMIN_ABSOLUTE_URI"
 
     # Setting ExecTimeLimit option
-    ! is_empty_value "$PHPMYADMIN_EXEC_TIME_LIMIT" && info "Setting ExecTimeLimit option" && phpmyadmin_conf_set "\$cfg['ExecTimeLimit']" "$PHPMYADMIN_EXEC_TIME_LIMIT"
+    ! is_empty_value "$PHPMYADMIN_EXEC_TIME_LIMIT" && info "Setting ExecTimeLimit option" && phpmyadmin_conf_set "\$cfg['ExecTimeLimit']" "$PHPMYADMIN_EXEC_TIME_LIMIT" yes
 
     # Setting MemoryLimit option
-    ! is_empty_value "$PHPMYADMIN_MEMORY_LIMIT" && info "Setting MemoryLimit option" && phpmyadmin_conf_set "\$cfg['MemoryLimit']" "$PHPMYADMIN_MEMORY_LIMIT"
+    ! is_empty_value "$PHPMYADMIN_MEMORY_LIMIT" && info "Setting MemoryLimit option" && phpmyadmin_conf_set "\$cfg['MemoryLimit']" "$PHPMYADMIN_MEMORY_LIMIT" yes
 
     # Configure database settings
     ! is_empty_value "$DATABASE_HOST" && info "Setting database host option" && phpmyadmin_conf_set "\$cfg['Servers'][\$i]['host']" "$DATABASE_HOST"
